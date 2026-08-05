@@ -1,0 +1,206 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+h1 { margin: 0; font-size: 20px; color: #38bdf8; }
+
+.stats-box {
+    background: #334155;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f1f5f9;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.tab-btn {
+    background: #1e293b;
+    color: #94a3b8;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+.tab-btn.active {
+    background: #ff7300;
+    color: white;
+    box-shadow: 0 4px 12px rgba(255,115,0,0.4);
+}
+
+.grid-pedidos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+.card {
+    background: #1e293b;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-top: 4px solid #ff7300;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card.completado {
+    border-top-color: #22c55e;
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #94a3b8;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 6px;
+}
+.cliente {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+.items {
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-bottom: 12px;
+    flex-grow: 1;
+}
+.items div { margin-bottom: 3px; }
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #334155;
+    padding-top: 10px;
+}
+.precio {
+    font-weight: bold;
+    color: #38bdf8;
+    font-size: 15px;
+}
+.btn-accion {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+}
+.btn-pendiente {
+    background: #22c55e;
+    color: white;
+}
+.btn-regresar {
+    background: #64748b;
+    color: white;
+}
+.vacio {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #64748b;
+    background: #1e293b;
+    border-radius: 14px;
+}
+.btn-danger {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+}
+.btn-logout {
+    background: #475569;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Pantalla de Inicio de Sesión */
+#loginOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.login-card {
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    max-width: 400px;
+    width: 90%;
+    border-top: 4px solid #ff7300;
+}
+.login-card h2 {
+    color: #38bdf8;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.login-card p {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+.btn-google {
+    background: #ffffff;
+    color: #1e293b;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background 0.2s;
+}
+.btn-google:hover {
+    background: #f1f5f9;
+}
